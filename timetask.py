@@ -1,18 +1,30 @@
-# Create an empty dictionary
-tasks={}                                                                                                                                               
-#Get user input
-task = raw_input("What is your first task?:")
-tasktime = raw_input("How many minutes will it take?:")
+#
+# Define some utility functions / classes
+#
 
-#Add user input to dictionary and make pair:
-tasks["task"] = "tasktime"
+#
+# Main
+#
+if __name__ == "__main__":
 
-#Ask for more tasks
-answer = raw_input("Do you have any other tasks?:")
+    answer = "yes"
+    tasks = {}
 
-if answer == "yes":
-    #loop to the beginning?
-else:
-    pass
+    #
+    # Prompt loop
+    #
+    while answer == "yes":
+        #Get user input
+        task = raw_input("What is your first task?: ")
+        tasktime = raw_input("How many minutes will it take?: ")
 
-print tasks
+        #Add user input to dictionary and make pair:
+        tasks["task"] = "tasktime"
+
+        #Ask for more tasks
+        answer = raw_input("Do you have any other tasks? (yes/no): ")
+
+    #
+    # Out of prompt loop
+    #
+    print tasks
